@@ -30,28 +30,6 @@ from pytorch_grad_cam.utils.image import show_cam_on_image, \
 from PIL import Image
 
 from absl import app, flags
-FLAGS = flags.FLAGS
-flags.DEFINE_string("base_config", 'logs/2024-12-24T09-14-40_mls_origvq_no_disc/configs/2024-12-24T09-14-40-mls_severe.yaml', help="model config") #  '/home/chihchieh/taming-transformers/configs/all_mix_Large.yaml'
-flags.DEFINE_string("model_path", './densenet-origin_4.pth', help="vae model path") #  '/home/chihchieh/taming-transformers/logs/2024-09-23T16-33-57_all_mix_Large/checkpoints/last.ckpt'
-flags.DEFINE_string("normal_path", '/home/chihchieh/projects/fm_mls_test/normal.txt', help="normal path")
-flags.DEFINE_string("mls_path", '/home/chihchieh/projects/fm_mls_test/mls.txt', help="mls path") #  '/home/chihchieh/taming-transformers/logs/2024-09-23T16-33-57_all_mix_Large/checkpoints/last.ckpt'
-flags.DEFINE_string("all_path", '/home/chihchieh/projects/fm_mls_test/all.txt', help="all path")
-flags.DEFINE_string("severe_path", '../gmm_gen/Xray14_val_official.txt', help="severe path")
-flags.DEFINE_string("cam_path", '/home/chihchieh/taming-transformers/cam_test', help="severe path")
-flags.DEFINE_integer("batch_size", 1, help="batch size") 
-
-
-def get_obj_from_str(string, reload=False):
-    module, cls = string.rsplit(".", 1)
-    if reload:
-        module_imp = importlib.import_module(module)
-        importlib.reload(module_imp)
-    return getattr(importlib.import_module(module, package=None), cls)
-
-def instantiate_from_config(config):
-    if not "target" in config:
-        raise KeyError("Expected key `target` to instantiate.")
-    return get_obj_from_str(config["target"])(**config.get("params", dict()))
 
 use_cuda = torch.cuda.is_available()
 device = torch.device("cuda" if use_cuda else "cpu")
