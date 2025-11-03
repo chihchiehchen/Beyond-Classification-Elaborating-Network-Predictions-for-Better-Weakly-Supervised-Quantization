@@ -1,6 +1,5 @@
 import torch
 import torch.nn as nn 
-#from model_resnet_rs import ResnetRS
 from functools import partial
 from typing import List
 from torchvision import models
