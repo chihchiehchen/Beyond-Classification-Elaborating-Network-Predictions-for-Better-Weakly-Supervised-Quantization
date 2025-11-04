@@ -1,5 +1,5 @@
 """
-RDNet
+RDNet ( from https://github.com/naver-ai/rdnet/blob/main/rdnet/rdnet.py )
 Copyright (c) 2024-present NAVER Cloud Corp.
 Apache-2.0
 """
