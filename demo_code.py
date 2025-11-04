@@ -1,6 +1,4 @@
 # the file for draw gradcam images
-from sklearn.metrics import roc_auc_score , roc_curve
-
 from timm.models import create_model, safe_model_name, resume_checkpoint, load_checkpoint, model_parameters
 import warnings, torch
 import pandas as pd
@@ -8,7 +6,6 @@ warnings.filterwarnings('ignore')
 import random
 import copy
 import os, importlib
-from omegaconf import OmegaConf
 from torchvision import models, transforms 
 from torchvision.transforms import Compose, Normalize, ToTensor, Resize
 from torchvision.datasets import ImageFolder
@@ -17,8 +14,6 @@ from torchsummary import summary
 import numpy as np
 import cv2
 import requests
-
-from ich_dataset_bhsd_normalize_middle import ICH_B_ALL_Dataset
 import shutil
 from models.model_segrdnet import SegRDNet
 
