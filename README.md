@@ -30,5 +30,5 @@ and finally save them ans PNG images. We provide the scripts in utils/transfer_t
 pip install pydicom nibabel
 ```
 
-to do:
+To do:
 reorganize the training script.
