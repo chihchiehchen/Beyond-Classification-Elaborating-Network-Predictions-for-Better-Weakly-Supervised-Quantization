@@ -7,7 +7,7 @@ This is the official implementation of our work "Beyond Classification: Elaborat
 To run the demo code, firstly install the following packages:
 
 ```
-pip install grad-cam, timm
+pip install grad-cam timm
 ```
 Then, run the following script:
 
@@ -19,8 +19,11 @@ Checkpoints can be downloaded at https://drive.google.com/file/d/1jy4WIxom5PbhNR
 (And rdnet_checkpoint-2.pth.tar is the checkpoint for the pretrained RDNet on the ICH dataset)  
 
 To generate heatmaps from your own DICOM/NIfTI files, first we need to transfer the DICOM/NIfTI files into Numpy files, concat three consequent slices together with window width = 130, window level = 25,
-and finally save them ans PNG images. We provide the scripts in utils/transfer_to_png.py  
+and finally save them ans PNG images. We provide the scripts in utils/transfer_to_png.py. Before doing so, you need to install the following packages:  
 
+```
+pip install pydicom nibabel
+```
 
 to do:
 reorganize the training script.
