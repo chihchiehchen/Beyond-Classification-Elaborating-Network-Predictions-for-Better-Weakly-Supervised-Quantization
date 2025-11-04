@@ -24,7 +24,7 @@ Here is the sample visualization:
 
 
 To generate heatmaps from your own DICOM/NIfTI files, first we need to transfer the DICOM/NIfTI files into Numpy files, concat three consequent slices together with window width = 130, window level = 25,
-and finally save them ans PNG images. We provide the scripts in utils/transfer_to_png.py. Before doing so, you need to install the following packages:  
+and finally save them as PNG images. We provide the scripts in utils/transfer_to_png.py. Before doing so, you need to install the following packages:  
 
 ```
 pip install pydicom nibabel
