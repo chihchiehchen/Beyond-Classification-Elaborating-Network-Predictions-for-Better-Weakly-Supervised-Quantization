@@ -1,7 +1,7 @@
 import cv2,os, PIL,shutil
 import numpy as np, nibabel as nib
 from PIL import Image
-
+from pydicom import dcmread
 
 def nii_to_png_3ch(filename,output_dir,ww = 130,wc = 25):
         
