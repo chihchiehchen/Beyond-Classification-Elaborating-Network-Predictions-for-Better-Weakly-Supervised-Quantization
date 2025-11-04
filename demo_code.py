@@ -17,8 +17,6 @@ from torchsummary import summary
 import numpy as np
 import cv2
 import requests
-
-from ich_dataset_bhsd_normalize_middle import ICH_B_ALL_Dataset
 import shutil
 from models.model_segrdnet import SegRDNet
 
