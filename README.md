@@ -18,7 +18,7 @@ python demo_code.py --model_checkpoint=<the pretrained checkpoint path> --png_di
 Checkpoints can be downloaded at https://drive.google.com/file/d/1jy4WIxom5PbhNRL2SzbjVezBCZa7sr_d/view?usp=sharing , where segdense_checkpoint-16.pth.tar is the checkpoint for this model.
 (And rdnet_checkpoint-2.pth.tar is the checkpoint for the pretrained RDNet on the ICH dataset)  
 
-<img src="demo_dir/20_ID_661bee514.png" width="450"> <img src="experiments_segrd_segmentation_out/20_ID_661bee514_SAH.png" width="450"> 
+<img src="demo_dir/20_ID_661bee514.png" width="400"> <img src="experiments_segrd_segmentation_out/20_ID_661bee514_SAH.png" width="400"> 
 
 
 To generate heatmaps from your own DICOM/NIfTI files, first we need to transfer the DICOM/NIfTI files into Numpy files, concat three consequent slices together with window width = 130, window level = 25,
