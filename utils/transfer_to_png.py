@@ -1,4 +1,4 @@
-import cv2,os, PIL,shutil
+import cv2, os, PIL, shutil
 import numpy as np, nibabel as nib
 from PIL import Image
 from pydicom import dcmread
