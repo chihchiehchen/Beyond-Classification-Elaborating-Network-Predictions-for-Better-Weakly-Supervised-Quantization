@@ -9,7 +9,7 @@ def get_args_parser():
     parser.add_argument('--csv-path', default='/home/ccchen/projects/ich_preprocessing/training/utils_dir/stage_2_sort_by_PatientID_and_zposition_dataloader.csv', type=str, help='final_csv_path')
     parser.add_argument('--save-dir', default='/home/ccchen/projects/dr_hsieh/kaggle_train_0112_png_3channels', type=str, help='save_dir')
     parser.add_argument('--dcm-dir', default='/media/ccchen/新增磁碟區/abc/stage_2_train', type=str, help='dcm_dir')
-    parser.add_argument('--id_json', default='/home/chihchieh/rsna/src/select_ich.json', type=str, help='dcm_dir')
+    parser.add_argument('--id_json', default='./select_ich.json', type=str, help='dcm_dir')
 
 
 def get_single_dir(df,uid,args):
