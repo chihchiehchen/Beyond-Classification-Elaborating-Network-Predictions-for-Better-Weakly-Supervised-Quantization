@@ -38,7 +38,7 @@ flags.DEFINE_string("model_checkpoint", "/home/chihchieh/rdnet/output/train/2025
 flags.DEFINE_string("png_dir", "./demo_dir", help="input_directory") 
 flags.DEFINE_string("cam_path", "./experiments_segrd_segmentation_out", help="output_directory")
 
-class mls_dataset(nn.Module):
+class ich_dataset(nn.Module):
 
     def __init__(self, png_dir, transform, key = '.png'):
         super().__init__()
@@ -103,7 +103,7 @@ def main(argv):
     assert os.path.exists(png_dir)
     os.makedirs(cam_path,exist_ok= True)
     
-    dataset_eval = mls_dataset(png_dir, transform = transforms.Compose([transforms.ToTensor(), transforms.Resize((512,512)), transforms.Normalize(mean= [0.485, 0.456, 0.406], std =[0.229, 0.224, 0.225])]) ) 
+    dataset_eval = ich_dataset(png_dir, transform = transforms.Compose([transforms.ToTensor(), transforms.Resize((512,512)), transforms.Normalize(mean= [0.485, 0.456, 0.406], std =[0.229, 0.224, 0.225])]) ) 
 
     L = dataset_eval.__len__()
     thresholds = [-1.0854573, -2.9508734, -2.0274892, -3.6829848, -2.9302106, -4.741706] # thresholds cal with max (TP -FP) on the validation dataset, corresponds to ICH, IPH, IVH, SAH, SDH, EDH
