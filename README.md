@@ -1,6 +1,7 @@
 # Beyond-Classification-Elaborating-Network-Predictions-for-Better-Weakly-Supervised-Quantization
 This is the official implementation of our work "Beyond Classification: Elaborating Network Predictions for Better Weakly Supervised Quantization"
 
+If you are interested in this work, please see our [subsequent work](https://github.com/chihchiehchen/Weakly-Supervised-LSE-Training-for-Efficient-Segmentation/tree/main), more delicate heatmaps are generated! 
 
 **Demo Code**
 
